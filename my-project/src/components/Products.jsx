@@ -33,6 +33,7 @@ const Products = () => {
     { id: 'electrical', name: 'Electrical', icon: Battery },
     { id: 'tools', name: 'Tools', icon: Wrench },
     { id: 'fluids', name: 'Fluids & Oils', icon: Filter },
+    { id: 'accessories', name: 'Accessories', icon: Car },
   ];
 
   const products = [
@@ -40,7 +41,6 @@ const Products = () => {
       id: 1,
       name: 'Premium Engine Oil',
       category: 'fluids',
-      price: '$29.99',
       rating: 4.8,
       image: '🛢️',
       description: 'High-performance synthetic engine oil for maximum protection',
@@ -51,7 +51,6 @@ const Products = () => {
       id: 2,
       name: 'Car Battery 12V',
       category: 'electrical',
-      price: '$89.99',
       rating: 4.9,
       image: '🔋',
       description: 'Long-lasting maintenance-free car battery',
@@ -62,7 +61,6 @@ const Products = () => {
       id: 3,
       name: 'Brake Pad Set',
       category: 'engine',
-      price: '$45.99',
       rating: 4.7,
       image: '🔧',
       description: 'Ceramic brake pads for superior stopping power',
@@ -73,7 +71,6 @@ const Products = () => {
       id: 4,
       name: 'Professional Tool Kit',
       category: 'tools',
-      price: '$199.99',
       rating: 4.9,
       image: '🧰',
       description: 'Complete 150-piece mechanic tool set',
@@ -84,7 +81,6 @@ const Products = () => {
       id: 5,
       name: 'Air Filter',
       category: 'engine',
-      price: '$19.99',
       rating: 4.6,
       image: '🌀',
       description: 'High-flow air filter for improved engine performance',
@@ -95,12 +91,71 @@ const Products = () => {
       id: 6,
       name: 'LED Headlight Bulbs',
       category: 'electrical',
-      price: '$69.99',
       rating: 4.8,
       image: '💡',
       description: 'Ultra-bright LED headlight conversion kit',
       features: ['6000K White', '12000 Lumens', 'Plug & Play'],
       badge: 'Upgrade'
+    },
+    {
+      id: 7,
+      name: 'Car Cover',
+      category: 'accessories',
+      rating: 4.5,
+      image: '🚗',
+      description: 'Weatherproof car cover for all seasons protection',
+      features: ['All-Weather Protection', 'UV Resistant', 'Breathable Fabric'],
+      badge: 'Popular'
+    },
+    {
+      id: 8,
+      name: 'Tire Pressure Gauge',
+      category: 'tools',
+      rating: 4.7,
+      image: '📏',
+      description: 'Digital tire pressure gauge with backlit display',
+      features: ['Digital Display', 'Backlit Screen', 'Precision Measurement'],
+      badge: 'Essential'
+    },
+    {
+      id: 9,
+      name: 'Wheel Cleaner',
+      category: 'fluids',
+      rating: 4.6,
+      image: '🌀',
+      description: 'Professional-grade wheel cleaner for all wheel types',
+      features: ['Acid-Free Formula', 'Safe for Alloys', 'Removes Brake Dust'],
+      badge: 'Effective'
+    },
+    {
+      id: 10,
+      name: 'OBD2 Scanner',
+      category: 'electrical',
+      rating: 4.8,
+      image: '💻',
+      description: 'Professional diagnostic scanner for all OBD2 vehicles',
+      features: ['Read/Clear Codes', 'Live Data', 'Smog Check'],
+      badge: 'Tech'
+    },
+    {
+      id: 11,
+      name: 'Jump Starter',
+      category: 'electrical',
+      rating: 4.9,
+      image: '⚡',
+      description: 'Portable lithium jump starter with USB ports',
+      features: ['2000A Peak', 'USB Charger', 'LED Flashlight'],
+      badge: 'Must-Have'
+    },
+    {
+      id: 12,
+      name: 'Car Vacuum',
+      category: 'accessories',
+      rating: 4.4,
+      image: '🧹',
+      description: 'Compact cordless car vacuum cleaner',
+      features: ['Portable Design', 'Strong Suction', 'Washable Filter'],
+      badge: 'Convenient'
     }
   ];
 
@@ -163,13 +218,10 @@ const Products = () => {
           </div>
         </div>
         
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-green-600">{product.price}</span>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center group-hover:px-8">
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            Add to Cart
-          </button>
-        </div>
+        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
+          View Details
+          <ChevronRight className="w-4 h-4 ml-2" />
+        </button>
       </div>
     </div>
   );
